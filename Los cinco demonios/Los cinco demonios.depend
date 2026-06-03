@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1780440096 source:c:\users\usuario\onedrive\escritorio\facultad ingreso\tup 1\programacion 1\juego tp final\juego los cinco demonios\los cinco demonios\funciones.cpp
+	<iostream>
+	"funciones.h"
+
+1780438980 c:\users\usuario\onedrive\escritorio\facultad ingreso\tup 1\programacion 1\juego tp final\juego los cinco demonios\los cinco demonios\funciones.h
+
+1780438980 source:c:\users\usuario\onedrive\escritorio\facultad ingreso\tup 1\programacion 1\juego tp final\juego los cinco demonios\los cinco demonios\main.cpp
+	<iostream>
+	<ctime>
+	"funciones.h"
+
