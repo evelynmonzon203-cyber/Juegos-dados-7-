@@ -1,7 +1,9 @@
-#ifndef FUNCIONES_H_INCLUDED
-#define FUNCIONES_H_INCLUDED
+#pragma once
 
-int menu();
+void mostrarMenu();
+int Menu();
 void mostrarDados(int dados[2]);
+void jugarPartida(int opcionMenu);
 
-#endif
+
+

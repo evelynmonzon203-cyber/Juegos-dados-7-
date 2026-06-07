@@ -3,9 +3,8 @@
 
 using namespace std;
 
-int menu()
+void mostrarMenu()
 {
-    int opcion;
 
     cout << "=================================" << endl;
     cout << "      LOS CINCO DEMONIOS" << endl;
@@ -15,11 +14,54 @@ int menu()
     cout << "3 - CREDITOS" << endl;
     cout << "0 - SALIR" << endl;
     cout << endl;
-    cout << "Ingrese una opcion: ";
-    cin >> opcion;
 
-    return opcion;
 }
+
+int Menu(){
+    srand(time(0));
+    int opcionMenu;
+
+    do{
+        system("cls");
+
+        mostrarMenu();
+        cout << "Ingrese una opcion: ";
+        cin >> opcionMenu;
+
+        switch(opcionMenu){
+            case 1:
+                jugarPartida(opcionMenu);
+            break;
+            case 2:
+                cout << "estadisticas();";
+            break;
+            case 3:
+                cout << "creditos();";
+            break;
+            case 4:
+            default:
+                cout << "Opcion incorrecta";
+
+    }
+    system("pause");
+    }while(opcionMenu != 3);
+    return 0;
+}
+
+void jugarPartida(int opcionMenu){
+
+    if(opcionMenu == 1){
+        int dados[2];
+
+        dados[0] = rand() % 6 + 1;
+        dados[1] = rand() % 6 + 1;
+
+        mostrarDados(dados);
+    }
+
+}
+
+
 
 void mostrarDados(int dados[2])
 {
