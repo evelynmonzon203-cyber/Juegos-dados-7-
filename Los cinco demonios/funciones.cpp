@@ -29,6 +29,9 @@ int Menu(){
         cin >> opcionMenu;
 
         switch(opcionMenu){
+            case 0:
+                cout << "Saliendo...";
+            break;
             case 1:
                 jugarPartida(opcionMenu);
             break;
@@ -44,27 +47,25 @@ int Menu(){
 
     }
     system("pause");
-    }while(opcionMenu != 3);
+    }while(opcionMenu != 0);
     return 0;
 }
 
-void jugarPartida(int opcionMenu){
+int lanzarDados(){
 
-    if(opcionMenu == 1){
-        int dados[2];
-
-        dados[0] = rand() % 6 + 1;
-        dados[1] = rand() % 6 + 1;
-
-        mostrarDados(dados);
-    }
-
+    return rand() % 6 + 1;;
 }
 
+void tirarDados(int dados[2]){
+    for(int i = 0; i<2;i++){
+        dados[i]= lanzarDados();
+    }
+}
 
 
 void mostrarDados(int dados[2])
 {
+
     for (int i = 0; i < 2; i++)
     {
         switch (dados[i])
@@ -121,4 +122,16 @@ void mostrarDados(int dados[2])
         cout << endl;
     }
 }
+
+void jugarPartida(int opcionMenu){
+    system("cls");
+    int tiradaDados[2];
+
+    if(opcionMenu == 1){
+        tirarDados(tiradaDados);
+        mostrarDados(tiradaDados);
+    }
+system("pause >nul");
+}
+
 
